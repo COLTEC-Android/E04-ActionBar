@@ -10,12 +10,14 @@
         android:id="@+id/atcBuscar"
         android:icon="@drawable/search"
         android:title="Buscar"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"/>
     <item
         android:id="@+id/atcCompartilhar"
         android:icon="@drawable/share"
         android:title="Compartilhar"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="androidx.appcompat.widget.ShareActionProvider"/>
     <item
         android:id="@+id/atcConfiguracoes"
         android:icon="@drawable/settings"
