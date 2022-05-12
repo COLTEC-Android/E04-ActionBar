@@ -4,26 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".SecondActivity">
 
     <TextView
-
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Olá!Essa é a primeira tela!"
+        android:text="Essa é a segunda tela!"
         android:layout_centerInParent="true"
         android:paddingBottom="25dp"
-        />
-
-    <Button
-
-        android:id="@+id/btn_update"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Proxima tela"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/text"
         />
 
 </RelativeLayout>
