@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">E04-ActionBar</string>
+    <string name="refresh">Atualizar</string>
+    <string name="search">Buscar</string>
+    <string name="share">Compartilhar</string>
+    <string name="settings">Configuracoes</string>
+    <string name="about">Informacoes</string>
+    <string name="exit">Sair</string>
 </resources>
