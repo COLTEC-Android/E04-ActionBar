@@ -3,16 +3,22 @@ package br.ufmg.coltec.e04_actionbar;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.ShareActionProvider;
+import androidx.core.view.MenuCompat;
+import androidx.core.view.MenuItemCompat;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.SearchView;
+
 import android.widget.Toast;
 
 public class SecondActivity extends AppCompatActivity {
@@ -34,8 +40,35 @@ public class SecondActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
-    public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.menu_second,menu);
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_second, menu);
+
+        //busca pelo searchView
+        MenuItem item = menu.findItem(R.id.action_search);
+        SearchView searchView = (SearchView) item.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+            public boolean onQueryTextSubmit(String s){
+                Toast.makeText(SecondActivity.this, "Buscar o texto " + s, Toast.LENGTH_SHORT).show();
+                return true;
+            }
+            public boolean onQueryTextChange(String s){
+                return true;
+            }
+        });
+
+        //compartilhamento
+        MenuItem item2 = menu.findItem(R.id.action_share);
+        ShareActionProvider shareProvider = (ShareActionProvider) MenuItemCompat.getActionProvider(item2);
+
+        String url = "https://api.whatsapp.com/send?phone="+31999999;
+        Intent i = new Intent(Intent.ACTION_VIEW);
+        i.setData(Uri.parse(url));
+
+        //Intent intent=new Intent(Intent.ACTION_SEND);
+        //intent.setType("text/*");
+        //intent.putExtra(Intent.EXTRA_TEXT,"Texto para compartilhar");
+        shareProvider.setShareIntent(i);
+
         return super.onCreateOptionsMenu(menu);
     }
 

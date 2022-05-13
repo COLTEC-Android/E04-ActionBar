@@ -10,12 +10,14 @@
     <item android:id="@+id/action_search"
         android:icon="@drawable/action_search"
         android:title="@string/search"
-        app:showAsAction="always"/>
+        app:showAsAction="always"
+        app:actionViewClass="android.widget.SearchView"/>
 
     <item android:id="@+id/action_share"
         android:icon="@drawable/action_share"
         android:title="@string/share"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom"
+        android:actionProviderClass="android.widget.ShareActionProvider"/>
 
     <item android:id="@+id/action_settings"
         android:icon="@drawable/action_settings"
