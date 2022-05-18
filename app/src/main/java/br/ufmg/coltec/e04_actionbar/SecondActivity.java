@@ -94,7 +94,7 @@ public class SecondActivity extends AppCompatActivity {
                 AlertDialog dialog = alertBuilder.create();
                 dialog.show();
                 break;
-            case R.id.action_exit:
+                case R.id.action_exit:
                 //sair
                 this.finishAffinity();
                 break;
