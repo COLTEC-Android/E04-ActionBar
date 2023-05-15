@@ -4,27 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/lblMain"
+        android:id="@+id/lblSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-
+        android:text="Chegou na segunda hein"
         android:layout_centerInParent="true"
         android:textSize="30dp"
         />
+
     <Button
-        android:id="@+id/btnGoToSecond"
+        android:id="@+id/goToThird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Segunda Tela"
+        android:text="Ir pra terceira"
 
-        android:layout_below="@id/lblMain"
-
+        android:layout_below="@id/lblSecond"
         android:layout_centerHorizontal="true"
+
         />
 
 </RelativeLayout>

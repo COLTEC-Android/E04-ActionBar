@@ -4,27 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    tools:context=".TerceiraActivity">
 
     <TextView
-        android:id="@+id/lblMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-
-        android:layout_centerInParent="true"
+        android:text="ufa, que trabalheira hein. boa"
         android:textSize="30dp"
-        />
-    <Button
-        android:id="@+id/btnGoToSecond"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Segunda Tela"
-
-        android:layout_below="@id/lblMain"
-
-        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         />
 
 </RelativeLayout>
